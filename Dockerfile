@@ -35,7 +35,7 @@ RUN groupadd -g 1000 elasticsearch && \
 
 WORKDIR /usr/share/elasticsearch
 
-COPY elasticsearch-6.8.11.tar.gz /opt/elasticsearch-6.8.11.tar.gz
+COPY v6.8.11.tar.gz /opt/elasticsearch-6.8.11.tar.gz
 
 #RUN cd /opt && curl --retry 8 -s -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.11.tar.gz && cd -
 
