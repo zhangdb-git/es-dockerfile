@@ -1,0 +1,17 @@
+dist: bionic
+
+
+services:
+  - docker
+
+
+script:
+  - wget https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2020-08-15-05-58/OpenJDK11U-jdk_aarch64_linux_hotspot_2020-08-15-05-58.tar.gz
+  - wget https://github.com/elastic/elasticsearch/archive/v6.8.11.tar.gz
+  - docker build -t zhangdber/es:6.8.11-arm64 .
+  - docker login -u zhangdber -p 123456aaa docker.io
+  - docker push zhangdber/es:6.8.11-arm64
+    
+    
+arch:
+  - arm64
